@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Ingredientes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>CRUD de Ingredientes</h2>
+        <form id="ingredienteForm">
+            <div class="input-field">
+                <input id="nome" type="text" class="validate" required>
+                <label for="nome">Nome</label>
+            </div>
+            <div class="input-field">
+                <input id="marca" type="text" class="validate" required>
+                <label for="marca">Marca</label>
+            </div>
+            <div class="input-field">
+                <input id="dataValidade" type="date" class="validate" required>
+                <label for="dataValidade">Data de Validade</label>
+            </div>
+            <div class="input-field">
+                <textarea id="observacao" class="materialize-textarea"></textarea>
+                <label for="observacao">Observação</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Adicionar Ingrediente</button>
+        </form>
+
+        <h3>Lista de Ingredientes</h3>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Data de Validade</th>
+                    <th>Observação</th>
+                </tr>
+            </thead>
+            <tbody id="ingredientesList"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
